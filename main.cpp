@@ -57,7 +57,7 @@ int main() {
 
     while (!game_over) {
         board();
-
+    // #TODO: gen food
         if (kbhit()) {
             switch (getch()) {
                 case 'w': snake.direction('u'); break;
