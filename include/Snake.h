@@ -7,9 +7,11 @@
 
 //#include <windows.h>
 #include <vector>
+#include "Coord.h"
 
 #define WIDTH 50
 #define HEIGHT 25
+
 
 using namespace std;
 

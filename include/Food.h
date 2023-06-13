@@ -8,6 +8,7 @@
 //#include <windows.h>
 #include <cstdio>
 #include <random>
+#include "Coord.h"
 
 #define WIDTH 50
 #define HEIGHT 25
