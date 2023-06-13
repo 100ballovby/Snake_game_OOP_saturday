@@ -1,3 +1,12 @@
-//
-// Created by Demid Raksin on 27.05.23.
-//
+#include "../include/Food.h"
+
+void Food::gen_food() {
+    pos.X = (rand() % WIDTH - 3) + 1;
+    pos.Y = (rand() % HEIGHT -3) + 1;
+}
+
+COORD Food::get_pos() { return pos; }
+
+
+
+
