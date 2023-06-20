@@ -53,11 +53,11 @@ void board() {
 int main() {
     score = 0;
     srand(time(NULL));
+    food.gen_food();
     char game_over = false;
 
     while (!game_over) {
         board();
-    // #TODO: gen food
         if (kbhit()) {
             switch (getch()) {
                 case 'w': snake.direction('u'); break;
@@ -70,7 +70,14 @@ int main() {
         if (snake.collided()) {
             game_over = true;
         }
+
+        if (snake.eaten(food.get_pos())) {
+            food.gen_food();
+            snake.grow();
+            score += 10;
+        }
     }
 
+    snake.move_snake();
     return 0;
 }
